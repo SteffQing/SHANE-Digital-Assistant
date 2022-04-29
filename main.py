@@ -4,7 +4,7 @@ import webbrowser
 from datetime import date, timedelta, datetime
 import serial  # used to communicate with Arduino board
 import pyowm  # used to tell the weather
-from Keys import OPENWEATHER # Keys.py is where I store all my API keys SHANE will use
+from Keys import OPENWEATHER # Keys.py is where I store all my API keys steff will use
 import operator  # used for math operations
 import random  # will be used throughout for random response choices
 import os  # used to interact with the computer's directory
@@ -18,7 +18,7 @@ engine = pyttsx3.init()
 engine.setProperty('volume', 1.0)
 
 # Wake word in Listen Function
-WAKE = "Shane"
+WAKE = "Steff"
 
 # Used to store user commands for analysis
 CONVERSATION_LOG = "Conversation Log.txt"
@@ -37,7 +37,7 @@ except serial.SerialException:
     pass
 
 
-class Shane:
+class Steff:
     def __init__(self):
         self.recognizer = sr.Recognizer()
         self.microphone = sr.Microphone()
@@ -271,7 +271,7 @@ class Shane:
                 print("Network error.")
 
 
-s = Shane()
+s = Steff()
 s.start_conversation_log()
 # Used to prevent people from asking the same thing over and over
 previous_response = ""
